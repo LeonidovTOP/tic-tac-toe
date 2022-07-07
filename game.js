@@ -1,9 +1,9 @@
 
         var stop = false;
         var arrData = document.querySelectorAll("[data-num]");
-        var arr = [null, null, null, null, null, null, null, null, null];// 9 ячеек
+        var arr = [null, null, null, null, null, null, null, null, null];
         
-        var concat = function (a, b, c) { // в этой функции проблема
+        var concat = function (a, b, c) { 
             var result = arr[a] + arr[b] + arr[c] ;
 
             if (result === "xxx" || result === "ooo") {
@@ -12,7 +12,7 @@
 
             switch (result){
                 case "xxnull":
-                    return ["x", c]  // а вот тут вместо ИКС была русская буква Х
+                    return ["x", c]  
 
                 case "xnullx":
                     return ["x", b]
@@ -21,10 +21,10 @@
                     return ["x", a]
 
                 case "oonull":
-                    return ["o", c]// тут была буква а
+                    return ["o", c]
 
                 case "onullo":
-                    return ["o", b]// тут была буква а
+                    return ["o", b]
 
                 case "nulloo":
                     return ["o", a]                    
@@ -163,7 +163,7 @@
             if(stop === true){return;}
 
             if (event.target.className === "cell" && event.target.textContent === "") {
-                event.target.style.color = "blue"; //вот тут надо было работать со стилем а ты с классом, ошибка
+                event.target.style.color = "blue"; 
                 event.target.innerHTML = "x";
                 arr[event.target.dataset.num] = "x";
             } else{
@@ -178,4 +178,4 @@
             checkWin();
         })
 
-        //можешь продолжать! удачи! будь ВНИМАТЕЛЕН! ОСОБЕННО! Когда копируешь.... и если буквы похожи следи на каком ты языке стоишь. вот такие вот рекомендации, почти как обычно
+        
