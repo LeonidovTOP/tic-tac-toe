@@ -23,63 +23,12 @@
         <div class="cell" data-num="4"></div>
         <div class="cell" data-num="5"></div>
         <br>
-        <div class="cell" data-num="6"></div> <!-- надо не психовать а разбираться. если ты будешь психи создавать - работы не будет и развития не будет. с психами дорога на диван и нищую жизнь. Это понятно? ну да  -->
+        <div class="cell" data-num="6"></div>
         <div class="cell" data-num="7"></div>
         <div class="cell" data-num="8"></div>
     </div>
 
-    <script>
-        var stop = false;
-        var arrData = document.querySelectorAll("[data-num]");
-        var arr = [null, null, null, null, null, null, null, null, null];
-        var concat = function (a, b, c) {
-            var result = arr[a] + arr[b] + arr[c] 
-
-            if (result === "xxx" || result === "ooo") {
-                return result
-            }
-
-            switch (result){
-                case "xxnull":
-                    return ["x", c]
-
-                case "xnullx":
-                    return ["x", b]
-
-                case "nullxx":
-                    return ["x", a]
-
-                        case "oonull":
-                    return ["o", a]
-
-                        case "onullo":
-                    return ["o", a]
-
-                        case "nulloo":
-                    return ["o", a]                    
-            }
-        }
-
-        var changeColorAndStop = function(a, b, c) {
-            arrData[a].style.color = "red"
-            arrData[b].style.color = "red"
-            arrData[c].style.color = "red"
-            stop =true
-        }
-
-        addEventListener("click", function(event){
-            if (event.target.className === "cell" && event.target.textContent === "") {
-                event.target.dataset.num = "blue"
-                event.target.innerHTML = "x"
-
-                arr[event.target.dataset.num] = "x"
-            } else{
-                return
-            }
-
-
-        })
-    </script>
+    <script src="game.js"></script>
 
 </body>
 
